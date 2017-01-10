@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 62</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Client" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1File-Main-Import" sketch:type="MSArtboardGroup" transform="translate(-266.000000, -832.000000)" fill="#DFDFDF">
+            <g id="Sidebar" sketch:type="MSLayerGroup" transform="translate(0.000000, 80.000000)">
+                <g id="Importing" transform="translate(0.000000, 728.000000)" sketch:type="MSShapeGroup">
+                    <path d="M272,28 L272,24 L270,24 L270,28 L266,28 L266,30 L270,30 L270,34 L272,34 L272,30 L276,30 L276,28 L272,28 Z" id="Rectangle-62" transform="translate(271.000000, 29.000000) rotate(-315.000000) translate(-271.000000, -29.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

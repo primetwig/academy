@@ -1,0 +1,15 @@
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper {
+    margin: 100px;
+    background: orangered;
+}
+
+.block  {
+
+    margin: 10px;
+    background: steelblue;
+}

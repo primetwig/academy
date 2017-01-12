@@ -58,3 +58,11 @@ describe("Test async", function () {
 
 });
 
+
+
+console.log((new Array(20)).join('-'));
+
+chai.expect(add).to.be.a("function");
+
+chai.expect(5).to.be.a("string"); // should fail
+

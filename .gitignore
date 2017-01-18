@@ -7,6 +7,7 @@ gen
 # user files
 node_modules/
 lesson99/
+modules/
 *.pdf
 
 

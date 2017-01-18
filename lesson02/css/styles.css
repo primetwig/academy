@@ -1,15 +1,125 @@
+table {
+    table-layout: auto | fixed;
+
+    border-spacing: 10px 20px;
+    border-collapse: collapse | separate;
+
+    empty-cells: show | hide;
+}
+
+td {
+    vertical-align: top | middle | bottom;
+}
+
+.dtable {
+    display: table;
+}
+.dtcell {
+    display: table-cell;
+}
+
+ul {
+    list-style: square inside;
+
+    list-style-type: circle | disc | square | decimal | none;
+    list-style-position: inside | outside;
+}
+
+ol {
+    counter-reset: section;
+    list-style: none;
+}
+ol li::before {
+    counter-increment: section;
+    content: counters(section, ".") " ";
+}
+
+
+div.block {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    background: steelblue;
+    border-radius: 5px;
+    border-radius: 5px 10px;
+    border-radius: 5px 10px 20px 40px;
+    border-radius: 50%;
+
+    border-radius: 20px/50px;
+}
+
+/*@keyframes rotate {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    45% { transform: rotate(180deg) }
+    55% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+}
+@keyframes flash {
+    0%,50%,100% { opacity: 1 }
+    25%,75% { opacity: 0 }
+}
+
 div {
-    width: 100px;
+    animation-name: spin;
+    animation-delay: 1s;
+    animation-direction: normal | reverse | alternate | alternate-reverse;
+    animation-duration: 2s;
+    animation-fill-mode: none | forwards | backwards | both;
+    animation-iteration-count: 5 | infinite;
+    animation-play-state: running | paused;
+    animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out;
+    animation: spin 2s 1s infinite normal;
+}
+
+div {
+    transition: width 2s linear 2s;
+    transition: width 2s, height 200ms;
+    transition: width 2s cubic-bezier(.09,.65,.82,.29);
+}
+
+div {
+    transform: translate(15px, 15px);
+    transform: scale(.5, 2);
+    transform: rotate(-20deg);
+    transform: skew(-10deg, -5deg);
+    transform: translateX(15px) rotateX(20deg);
+
+    transform-origin: 50% 50%; !* left | right | top | bottom | center *!
+    transform-style: flat | preserve-3d;
+    backface-visibility: visible | hidden;
+    perspective: none | 400px;
+    perspective-origin: 50% 50%; !* left | right | top | bottom | center *!
+}*/
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center | flex-end | flex-start | space-around | space-between;
+    flex-flow: row-reverse | column;
+    align-items: baseline | center | stretch | flex-start | flex-start;
+}
+
+.flex-item {
     height: 100px;
 }
-
-.wrapper {
-    margin: 100px;
+.flex-item:nth-child(1) {
     background: orangered;
+    flex-grow: 4;
 }
-
-.block  {
-
-    margin: 10px;
+.flex-item:nth-child(2) {
+    background: darkgreen;
+    flex-grow: 6;
+}
+.flex-item:nth-child(3) {
     background: steelblue;
+    flex-grow: 2;
+    flex-shrink: 4;
+    flex-basis: 200px;
+    flex: 2 4 200px;
 }
+
+

@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2010-01-01:v2
+
+CACHE:
+index.html
+css/style.css
+images/logo.png
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html
+images/avatars/ images/no-avatar.jpg
+
+
+

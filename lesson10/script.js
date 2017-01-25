@@ -1,15 +1,15 @@
-//// cache
-//var cache = window.applicationCache;
-//
-//window.applicationCache.addEventListener('updateready', function (e) {
-//
-//    //window.location.reload();
-//
-//    if (cache.status === cache.UPDATEREADY) {
-//        confirm("Your page has a new version. Update?") &&
-//        window.location.reload();
-//    }
-//});
+// cache
+var cache = window.applicationCache;
+
+window.applicationCache.addEventListener('updateready', function (e) {
+
+    //window.location.reload();
+
+    if (cache.status === cache.UPDATEREADY) {
+        confirm("Your page has a new version. Update?") &&
+        window.location.reload();
+    }
+});
 
 
 
@@ -252,33 +252,35 @@
 
 
 
+//// closure
+//var someFunc = function () {
+//    var value = 10;
+//
+//    return function () {
+//        return value;
+//    };
+//};
+//var callFunction = someFunc();
+//
+//var anotherFunction = function () {
+//    var value = 20;
+//    console.log(callFunction());
+//};
+//anotherFunction();
+//
+//
+//
+//var counter = (function () {
+//    var i = 0;
+//    return function (num) {
+//        if (typeof num != "undefined") i = num;
+//        return i++;
+//    };
+//})();
+//console.log( counter() );
+//console.log( counter() );
+//console.log( counter(5) );
+//console.log( counter() );
+//console.log( counter() );
 
-var func = function () {
-    var value = 10;
 
-    return function () {
-        return value;
-    };
-};
-var callFunc = func();
-
-var anotherFunction = function () {
-    var value = 20;
-    console.log(callFunc());
-};
-anotherFunction();
-
-
-
-var counter = (function () {
-    var i = 0;
-    return function (num) {
-        if (typeof num != "undefined") i = num;
-        return i++;
-    };
-})();
-console.log(counter());
-console.log(counter());
-console.log(counter(5));
-console.log(counter());
-console.log(counter());

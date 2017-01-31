@@ -1,0 +1,60 @@
+.none {
+    display: none;
+}
+
+
+
+.images .input-holder {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    overflow: hidden;
+    background: steelblue;
+}
+
+.images .input-holder:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    height: 50%;
+    margin: auto;
+    background: #fff;
+}
+.images .input-holder:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 10%;
+    margin: auto;
+    background: #fff;
+}
+
+.images .input-holder input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    margin: -50%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.images img {
+    display: inline-block;
+    height: 100px;
+    margin-right: 20px;
+}
+
+

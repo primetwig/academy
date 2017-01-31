@@ -75,3 +75,113 @@
 
 
 
+//// audio and video
+//var audio = document.querySelector('audio');
+//audio.volume
+//audio.muted
+//audio.controls
+//audio.currentTime
+//audio.duration
+//audio.paused
+//audio.play()
+//audio.pause()
+//
+//({}).toString.call(audio); // HTMLAudioElement
+//HTMLAudioElement.prototype.stop = function() {
+//    !this.paused && this.pause();
+//    this.currentTime = 0;
+//};
+//
+//var video = document.querySelector('video');
+//video.addEventListener('canplaythrough', function(e) {});
+//canplay
+//progress
+//loadeddata // first frame
+//loadedmetadata
+
+
+
+//// Sets
+//var names = new Set();
+//
+//names.add("Andy")
+//    .add("Tom")
+//    .add("Lisa")
+//    .add("Tom");
+//
+//console.log(names);      // Set {"Andy", "Tom", "Lisa"}
+//console.log(names.size); // 3
+//
+//names.has("Andy");    // true
+//
+//names.delete("Lisa"); // true. Set {"Andy", "Tom"}
+//names.clear();        // Set {}
+//
+//var days = ["Sunday", "Monday", "Tuesday", "Monday", "Sunday", "Sunday"];
+//var set = new Set(days); // Set {"Sunday", "Monday", "Tuesday"}
+//var filtered = [...set];
+//console.log(filtered); // ["Sunday", "Monday", "Tuesday"]
+//
+//days.filter(function (el, i, arr) {
+//    return arr.indexOf(el) == i;
+//});
+
+
+
+//// Maps
+//let map = new Map();
+//map.set(1, 'number');
+//map.set('1', 'string');
+//
+//map.get(1);   // number
+//map.get('1'); // string
+//
+//map.has('1');    // true
+//map.delete('1'); // true
+//map.clear();
+//
+//
+//let days = new Map([
+//    ['Sun', 'Sunday'],
+//    ['Mon', 'Monday'],
+//    ['Tue', 'Tuesday']
+//]);
+//
+//days.forEach(console.log);
+
+
+
+
+// Styles
+var styleTags = document.querySelectorAll('.styles');
+
+[].forEach.call(document.styleSheets, function(sheet) {
+    var index = [].indexOf.call(styleTags, sheet.ownerNode);
+
+    if (index > -1) {
+        console.log("--- sheet");
+        console.log(sheet);
+        var rules = sheet.cssRules;
+
+        console.log("--- loop over rules");
+        [].forEach.call(rules, function (rule) {
+            var selector = rule.selectorText;
+            var elements = document.querySelectorAll(selector);
+            console.log("selector:", selector);
+
+            [].forEach.call(rule.style, function (property) {
+                console.log("property:", property);
+                console.log("value:", rule.style[property]);
+
+                [].forEach.call(elements, function (el) {
+                    el.style[property] = rule.style[property];
+                })
+            });
+        });
+    }
+});
+
+
+
+
+

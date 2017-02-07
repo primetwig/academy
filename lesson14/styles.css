@@ -1,0 +1,18 @@
+button {
+    background: white;
+}
+
+div {
+    padding: 20px 0;
+    border-bottom: 1px solid gray;
+}
+
+.color-red {
+    background: pink;
+}
+
+.size-wide {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+

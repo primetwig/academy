@@ -263,11 +263,12 @@
         </svg>
     </section>
 
-    <section class="section-13">
+    <section>
         <style>
-            .section-13 {
+            .holder {
                 background: white;
                 filter: contrast(20);
+                overflow: hidden;
             }
             .test {
                 display: inline-block;
@@ -279,9 +280,21 @@
                 transition: all 400ms;
                 filter: blur(10px);
             }
+            .test:hover {
+                margin-right: -5px;
+            }
+            .hint {
+                width: 50px;
+                text-align: center;
+            }
         </style>
-        <div class="test"></div>
-        <div class="test"></div>
+
+        <div class="holder">
+            <div class="test"></div>
+            <div class="test"></div>
+        </div>
+
+        <div class="hint">hover</div>
     </section>
 
 </div>

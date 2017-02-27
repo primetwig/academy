@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>My angular app</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <script src="node_modules/angular/angular.js" defer></script>
+    <script src="src/main.js" defer></script>
+</head>
+<body>
+
+<p>
+    5 + 3 = {{ 5 + 3 }}
+</p>
+<p>
+    5 + 3 = 8
+</p>
+
+<p>
+    {{ "Hi" + " there" }}
+</p>
+<p>
+    Hi there
+</p>
+
+<p title="{{ 5 > 3 ? 5 : 0 }}">
+    some text
+</p>
+<p title="5">
+    some text
+</p>
+
+</body>
+</html>

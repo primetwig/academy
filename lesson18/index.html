@@ -5,32 +5,70 @@
     <title>My angular app</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/main.css"/>
 
     <script src="node_modules/angular/angular.js" defer></script>
     <script src="src/main.js" defer></script>
 </head>
 <body>
 
-<p>
-    5 + 3 = {{ 5 + 3 }}
-</p>
-<p>
-    5 + 3 = 8
-</p>
+<div class="wrapper" ng-class="{'app-loaded': true}">
 
-<p>
-    {{ "Hi" + " there" }}
-</p>
-<p>
-    Hi there
-</p>
+    <!--<div>
+        <p>
+            5 + 3 = {{ 5 + 3 }}
+        </p>
+        <p>
+            5 + 3 = 8
+        </p>
 
-<p title="{{ 5 > 3 ? 5 : 0 }}">
-    some text
-</p>
-<p title="5">
-    some text
-</p>
+        <p>
+            {{ "Hi" + " there" }}
+        </p>
+        <p>
+            Hi there
+        </p>
+
+        <p title="{{ 5 > 3 ? 5 : 0 }}">
+            some text
+        </p>
+        <p title="5">
+            some text
+        </p>
+    </div>-->
+
+
+    <!--<div ng-controller="StoreController as store">
+        <h1>{{ store.product.name }}</h1>
+        <h2>${{ store.product.price }}</h2>
+        <p>{{ store.product.description }}</p>
+        <hr/>
+        <p>Dealer: {{ merchant.name }}</p>
+    </div>-->
+
+
+    <!--<div ng-controller="StoreController as store">
+        <div ng-hide="store.product.soldOut">
+            <h1>{{ store.product.name }}</h1>
+            <h2>${{ store.product.price }}</h2>
+            <p>{{ store.product.description }}</p>
+            <button ng-show="store.product.canPurchase">Get one</button>
+        </div>
+    </div>-->
+
+
+    <div ng-controller="StoreController as store">
+        <div ng-repeat="product in store.products">
+            <h1>{{ product.name }}</h1>
+            <h2>${{ product.price }}</h2>
+            <p>{{ product.description }}</p>
+            <button ng-show="product.canPurchase">Get one</button>
+        </div>
+    </div>
+
+
+
+</div>
 
 </body>
 </html>

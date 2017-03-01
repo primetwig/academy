@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My angular app</title>
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="src/main.css"/>
 
     <script src="node_modules/angular/angular.js" defer></script>
@@ -67,30 +67,6 @@
         <hr ng-repeat-end ng-hide="$last"/>
     </div>-->
 
-
-
-
-
-
-
-
-    <!-- part 2 -->
-
-    <!--<div ng-controller="StoreController as store">
-        <div ng-repeat-start="product in store.products | orderBy:'-price'">
-            <h1>{{ product.name }}</h1>
-            <h2>{{ product.price | currency }}</h2>
-
-            <p>{{ 1437307530159 | date:'dd/MM/yyyy @ hh:mm' }}</p>
-            <p>{{ 'Some text' | uppercase }}</p>
-            <p>{{ 'Some description' | limitTo:8 }}</p>
-            <div ng-repeat="product in store.products | limitTo:3"></div>
-            <div ng-repeat="product in store.products | orderBy:'-price'"></div>
-
-            <button ng-show="product.canPurchase">Get one</button>
-        </div>
-        <hr ng-repeat-end ng-hide="$last"/>
-    </div>-->
 
 
 

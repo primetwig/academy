@@ -34,7 +34,7 @@ app.controller('StoreController', function () {
         },
         {
             name: "Sapphire",
-            price: 12.70,
+            price: 12,
             description: "Some text goes here as well",
             canPurchase: false
         }

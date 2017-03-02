@@ -37,7 +37,7 @@ var random = {
 var app = angular.module('app', []);
 
 
-app.controller('StoreController', function () {
+app.controller('StoreController', function ($timeout) {
     this.products = (new Array(10))
         .join('a')
         .split('a')
@@ -54,28 +54,73 @@ app.controller('StoreController', function () {
         });
 
     this.numbers = [5, 6, 1, 2, 3, 4];
-});
 
-app.controller('PanelController', function () {
-    this.tab = 1;
 
-    this.selectTab = function (tab) {
-        this.tab = tab;
-    };
+    this.name = "Andy";
 
-    this.isSelected = function (tab) {
-        return this.tab == tab;
-    };
+    $timeout(() => {
+        this.name = "Harry";
+    }, 3000);
 
 });
 
-app.controller('GalleryController', function () {
-    this.current = 0;
 
-    this.setCurrent = function(index){
-        this.current = index || 0;
-    };
-});
+
+
+
+
+//app.controller('StoreController', function (uppercaseFilter, dateFilter) {
+//    this.name = "James";
+//    this.bigName = uppercaseFilter(this.name);
+//
+//    this.date = dateFilter(1437307530159, 'dd/MM/yyyy @ hh:mm');
+//});
+
+
+
+//app.filter('double', function() {
+//    return function(input, tripple) {
+//        input = +input || 0;
+//
+//        return input * 2 + (input * ~~tripple);
+//    };
+//});
+//
+//// + (add || 0)
+
+
+
+
+
+
+
+
+//app.controller('PanelController', function () {
+//    this.tab = 1;
+//
+//    this.selectTab = function (tab) {
+//        this.tab = tab;
+//    };
+//
+//    this.isSelected = function (tab) {
+//        return this.tab == tab;
+//    };
+//
+//});
+
+
+
+
+
+
+
+//app.controller('GalleryController', function () {
+//    this.current = 0;
+//
+//    this.setCurrent = function(index){
+//        this.current = index || 0;
+//    };
+//});
 
 
 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>My angular app</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/main.css"/>
+
+    <script src="node_modules/angular/angular.js" defer></script>
+    <script src="node_modules/chance/chance.js" defer></script>
+    <script src="src/main.js" defer></script>
+</head>
+<body>
+
+<div class="wrapper" ng-class="{'app-loaded': true}">
+
+
+
+    <div ng-controller="StoreController as store">
+
+        <select ng-model="color1">
+            <option value="">No</option>
+            <option ng-repeat="color in store.colors" value="{{ color.id }}">{{ color.name }}</option>
+        </select>
+        {{ color1 }}
+        <hr/>
+
+        <select ng-options="color.name for color in store.colors" ng-model="color2">
+            <option value="">No</option>
+        </select>
+        {{ color2 }}
+        <hr/>
+
+        <select ng-options="color.name for color in store.colors track by color.id" ng-model="color3">
+            <option value="">No</option>
+        </select>
+        {{ color3 }}
+        <hr/>
+
+        <select ng-options="color.id as color.name for color in store.colors track by color.id" ng-model="color4">
+            <option value="">No</option>
+        </select>
+        {{ color4 }}
+
+    </div>
+
+
+
+    <!--<div ng-controller="StoreController as store">
+
+        <div class="item" ng-repeat="product in store.products">
+            <h3 class="pull-right">{{ product.price | currency }}</h3>
+            <h2>{{ product.name }}</h2>
+
+            <div class='gallery' ng-controller="GalleryController as gallery"  ng-show="product.images.length">
+                <div class="img-wrap">
+                    <img ng-src="{{ product.images[gallery.current] }}" />
+                </div>
+                <ul class="img-thumbnails clearfix">
+                    <li class="small-image thumbnail" ng-repeat="image in product.images">
+                        <img ng-src="{{ image }}" ng-click="gallery.setCurrent($index)" />
+                    </li>
+                </ul>
+            </div>
+
+            <div ng-controller="PanelController as panel">
+                <ul class="nav nav-pills">
+                    <li ng-class="{ active: panel.isSelected(1) }">
+                        <a href ng-click="panel.selectTab(1)">Description</a>
+                    </li>
+                    <li ng-class="{ active: panel.isSelected(2) }">
+                        <a href ng-click="panel.selectTab(2)">Specifications</a>
+                    </li>
+                    <li ng-class="{ active: panel.isSelected(3) }">
+                        <a href ng-click="panel.selectTab(3)">Reviews</a>
+                    </li>
+                </ul>
+
+                <div class="panel" ng-show="panel.isSelected(1)">
+                    <div class="panel-body">
+                        <h4>Description</h4>
+                        <blockquote>{{ product.description }}</blockquote>
+                    </div>
+                </div>
+                <div class="panel" ng-show="panel.isSelected(2)">
+                    <div class="panel-body">
+                        <h4>Specifications</h4>
+                        <blockquote>No data yet</blockquote>
+
+                    </div>
+                </div>
+                <div class="panel" ng-show="panel.isSelected(3)">
+                    <div class="panel-body">
+                        <h4>Reviews</h4>
+
+                        &lt;!&ndash;<blockquote>No data yet</blockquote>&ndash;&gt;
+                        <blockquote ng-repeat="review in product.reviews">
+                            <b>{{ review.stars }} Stars:</b>
+                            {{ review.body }}
+                            <div><i>– {{ review.author }}</i></div>
+                        </blockquote>
+
+                        <form name="reviewForm">
+                            <blockquote ng-repeat="review in product.reviews">
+                                <b>{{ review.stars }} Stars:</b>
+                                {{ review.body }}
+                                <div><i>– {{ review.author }}</i></div>
+                            </blockquote>
+
+                            <fieldset class="form-group">
+                                <select class="form-control">
+                                    <option value="1">1 star</option>
+                                    <option value="2">2 stars</option>
+                                    <option value="3">3 stars</option>
+                                    <option value="4">4 stars</option>
+                                    <option value="5">5 stars</option>
+                                </select>
+                            </fieldset>
+
+                            <textarea></textarea>
+                            <label>by:</label>
+                            <input type="text" />
+                            <input type="submit" value="Submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-success" ng-show="product.canPurchase">Get one</button>
+            </div>
+        </div>
+
+    </div>-->
+
+
+
+</div>
+
+</body>
+</html>

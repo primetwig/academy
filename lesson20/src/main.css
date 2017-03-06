@@ -38,6 +38,14 @@ img {
     height: 100px;
     margin: 0 auto 10px;
 }
+.img-thumbnails {
+    padding: 0;
+    text-align: center;
+}
+.img-thumbnails .thumbnail {
+    display: inline-block;
+    vertical-align: top;
+}
 
 button {
     display: block;

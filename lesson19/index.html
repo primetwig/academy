@@ -181,7 +181,7 @@
             <h3 class="pull-right">${{ product.price }}</h3>
             <h2>{{ product.name }}</h2>
 
-            <div class='gallery' ng-controller="GalleryController as gallery"  ng-show="product.images.length">
+            <div class="gallery" ng-controller="GalleryController as gallery"  ng-show="product.images.length">
                 <div class="img-wrap">
                     <img ng-src="{{ product.images[gallery.current] }}" />
                 </div>

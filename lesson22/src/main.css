@@ -1,0 +1,49 @@
+.none {
+    display: none !important;
+}
+
+
+
+.wrapper {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.wrapper.app-loaded {
+    opacity: 1;
+}
+
+
+h2, h3 {
+    margin: 0 0 10px;
+}
+
+
+.inline-block, .ib {
+    display: inline-block;
+}
+
+
+
+
+.modals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+
+
+
+
+
+
+
+
+
+
+

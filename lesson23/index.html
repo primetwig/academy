@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>My angular app</title>
 
+    <base href="/"/>
+
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="src/main.css"/>
 
     <script src="node_modules/angular/angular.js" defer></script>
+    <script src="node_modules/angular-route/angular-route.js" defer></script>
     <script src="node_modules/chance/chance.js" defer></script>
     <script src="src/main.js" defer></script>
 </head>
@@ -16,14 +19,28 @@
 <div class="wrapper" ng-class="{'app-loaded': true}">
 
 
-    <!--<div ng-controller="FormController as formCtrl">
+    <!-- $q -->
+    <div ng-controller="SomeController as someCtrl">
 
-        <form ng-submit="formCtrl.submit()">
+        User: {{ someCtrl.user.name }}
+
+    </div>
+
+
+
+
+
+
+
+    <!-- MODAL -->
+    <!--<div ng-controller="SomeController as someCtrl">
+
+        <form ng-submit="someCtrl.submit()">
             <fieldset class="form-group">
                 <input
                         type="text"
                         class="form-control"
-                        ng-model="formCtrl.message"
+                        ng-model="someCtrl.message"
                         placeholder="Enter some text"
                 />
             </fieldset>
@@ -58,6 +75,130 @@
 
 
 
+
+    <!-- SAME PRODUCTS -->
+    <!--<div ng-controller="SomeController as someCtrl">
+
+        <form ng-submit="someCtrl.submit()">
+            <fieldset class="form-group">
+                <input
+                        type="text"
+                        class="form-control"
+                        ng-model="someCtrl.name"
+                        placeholder="Enter some text"
+                />
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </fieldset>
+
+            <section>
+                <span class="label label-primary" ng-repeat="product in someCtrl.getProducts()">
+                    {{ product }}
+                </span>
+            </section>
+        </form>
+
+    </div>
+    <hr/>
+    <div ng-controller="SomeController as someCtrl">
+
+        <form ng-submit="someCtrl.submit()">
+            <fieldset class="form-group">
+                <input
+                        type="text"
+                        class="form-control"
+                        ng-model="someCtrl.name"
+                        placeholder="Enter some text"
+                />
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </fieldset>
+
+            <section>
+                <span class="label label-primary" ng-repeat="product in someCtrl.getProducts()">
+                    {{ product }}
+                </span>
+            </section>
+        </form>
+
+    </div>-->
+
+
+
+
+
+
+    <!-- DIFFERENT PRODUCTS -->
+    <!--<div ng-controller="SomeController as someCtrl">
+
+        <form ng-submit="someCtrl.submit()">
+            <fieldset class="form-group">
+                <input
+                        type="text"
+                        class="form-control"
+                        ng-model="someCtrl.name"
+                        placeholder="Enter some text"
+                />
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </fieldset>
+
+            <section>
+                <span class="label label-primary" ng-repeat="product in someCtrl.getProducts()">
+                    {{ product }}
+                </span>
+            </section>
+        </form>
+
+    </div>
+    <hr/>
+    <div ng-controller="SomeController as someCtrl">
+
+        <form ng-submit="someCtrl.submit()">
+            <fieldset class="form-group">
+                <input
+                        type="text"
+                        class="form-control"
+                        ng-model="someCtrl.name"
+                        placeholder="Enter some text"
+                />
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </fieldset>
+
+            <section>
+                <span class="label label-primary" ng-repeat="product in someCtrl.getProducts()">
+                    {{ product }}
+                </span>
+            </section>
+        </form>
+
+    </div>-->
+
+
+
+
+
+
+    <!-- PAGES -->
+    <!--<div ng-controller="MainController as mainCtrl">
+
+        Choose:
+        <a href="about">About</a> |
+        <a href="news">News</a> |
+        <a href="news/13">News title #1</a>
+
+        <div ng-view></div>
+
+    </div>-->
 
 </div>
 

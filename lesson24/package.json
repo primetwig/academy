@@ -1,5 +1,5 @@
 {
-  "name": "lesson19",
+  "name": "lesson18",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -8,9 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "angular": "^1.6.2",
-    "bootstrap": "^3.3.7",
-    "chance": "^1.0.6"
+  "devDependencies": {
+    "create-react-app": "^1.3.0"
   }
 }

@@ -5,9 +5,8 @@ out
 gen
 
 # user files
-*/node_modules/
+**/node_modules/
 */web/
-lesson99/
 modules/
 *.pdf
 

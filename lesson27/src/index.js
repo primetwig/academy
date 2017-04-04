@@ -59,20 +59,22 @@ store.dispatch({ type: "INC", payload: 1 });
 //    }, 1000);
 //});
 
-import promise from 'redux-promise-middleware';
-new Promise((resolve, reject) => {
-    setTimeout(() => {
-        if (Math.random() > 0.5) {
-            const news = [
-                { title: "Some title", text: "text text text..." },
-                { title: "Another title", text: "text?" }
-            ];
-            resolve(news);
-        } else {
-            reject({ code: 401, message: "Not allowed" });
-        }
-    }, 2000);
-});
+//import promise from 'redux-promise-middleware';
+//const getNews = () => {
+//    return new Promise((resolve, reject) => {
+//        setTimeout(() => {
+//            if (Math.random() > 0.5) {
+//                const news = [
+//                    { title: "Some title", text: "text text text..." },
+//                    { title: "Another title", text: "text?" }
+//                ];
+//                resolve(news);
+//            } else {
+//                reject({ code: 401, message: "Not allowed" });
+//            }
+//        }, 2000);
+//    });
+//};
 
 
 
@@ -85,18 +87,17 @@ new Promise((resolve, reject) => {
 //
 //b.name = "Harry";
 //
-//console.log({ a, b });
-//// a: { name: "Harry" }
-//// b: { name: "Harry" }
+//console.log('a:', a);
+//console.log('b:', b);
 
 
 
 //let a = { name: "Andy" };
 //let b = Object.assign({}, a, { name: "Harry" });
 //
-//console.log({ a, b });
-//// a: { name: "Andy" }
-//// b: { name: "Harry" }
+//console.log('a:', a);
+//console.log('b:', b);
+//
 //
 ////b = {
 ////    ...a,
@@ -112,9 +113,8 @@ new Promise((resolve, reject) => {
 //
 //b.things.push(4);
 //
-//console.log({ a, b });
-//// a: { name: "Andy", things: [1, 2, 3, 4] }
-//// b: { name: "Harry", things: [1, 2, 3, 4] }
+//console.log('a:', a);
+//console.log('b:', b);
 
 
 
@@ -124,9 +124,9 @@ new Promise((resolve, reject) => {
 //b.things = b.things.concat(4);
 ////b.things = b.things.filter(v => v !== 2);
 //
-//console.log({ a, b });
-//// a: { name: "Andy", things: [1, 2, 3] }
-//// b: { name: "Harry", things: [1, 2, 3, 4] }
+//console.log('a:', a);
+//console.log('b:', b);
+//
 //
 ////b = {
 ////    ...b,

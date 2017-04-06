@@ -7,7 +7,7 @@ const reducer = function (state = 0, action) {
         case 'INC':
             return state + payload;
         case 'DEC':
-            return state + payload;
+            return state - payload;
         default:
             return state;
     }
@@ -52,10 +52,13 @@ store.dispatch({ type: "INC", payload: 1 });
 //import thunk from 'redux-thunk';
 //
 //store.dispatch(dispatch => {
-//    dispatch({ type: "INC", payload: 1 });
+//    dispatch({ type: "USER_GET_STARTED" });
 //
 //    setTimeout(() => {
-//        dispatch({ type: "INC", payload: 1 });
+//        dispatch({
+//            type: "USER_GET_RECEIVED",
+//            payload: { name: "Andy" }
+//        });
 //    }, 1000);
 //});
 

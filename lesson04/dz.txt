@@ -10,22 +10,22 @@ Javascript:
 - функции (аргументы, колбэки)
 - всплытие
 - области видимости
-
 - объекты
 - контекст (call, apply, bind)
 - цепные вызовы
 - JSON
 - массивы
+- Math
 
 
 Домашнее задание:
-1.
+1. (переменные)
 - Объявите две переменные: admin и name.
 - Запишите в name строку "Harry".
 - Скопируйте значение из name в admin.
 - Выведите admin (должно вывести "Harry").
 
-2.
+2. (переменные)
 - Выберите какую-то формулу (например, математическую)
 - Объявите необходимые переменные
 - Выведите в консоль результат работы формулы
@@ -36,7 +36,7 @@ var pi = 3.1415;
 var R = 10;
 console.log(2 * pi * R);
 
-3.
+3. (if/else)
 - Объявите переменную с каким-то числом.
 - Используя конструкцию if..else, напишите код,
   который выводит в консоль:
@@ -44,30 +44,30 @@ console.log(2 * pi * R);
   • -1, если значение меньше нуля,
   • 0, если значение равно нулю.
 
-4.
+4. (циклы)
 - При помощи цикла for выведите чётные числа от 2 до 10.
 
-5.
+5. (циклы)
 Натуральное число называется простым, если оно ни на что не делится, кроме себя и 1.
 Другими словами, число n простое, если при делении на любое число от 2 до n-1 есть остаток.
 Создайте код, который выводит все простые числа из интервала от 2 до 10. Результат должен быть: 2,3,5,7.
 P.S. Код также должен легко модифицироваться для любых других интервалов.
 
-6.
+6. (циклы)
 - Напишите функцию, которая принимает число и возвращает true/false в зависимости от того, простое ли это число.
 
-7.
+7. (объекты)
 Создайте объект пользователя со свойствами age, isAdmin и методом grant.
 Вызов метода grant должен проверять возраст и:
 - если он больше 18, переключать isAdmin в true
 - если он меньше 18, переключать isAdmin в false
 
-8.
+8. (цепные вызовы)
 Напишите цепочку вызовов, которая превращает одну строку в другую:
 "Some time ago I was here" --> "Yesterday I was here and there"
 "10, 20, 30, 40" --> "10; 20; 30; 40"
 
-9.
+9. (массивы)
 Создайте массив, сделайте его копию и отсортируйте копию.
 var nums, nums2;
 nums = [6, 4, 9, 3, 4, 2];
@@ -75,4 +75,64 @@ nums = [6, 4, 9, 3, 4, 2];
 console.log(nums);  // [6, 4, 9, 3, 5, 2]
 console.log(nums2); // [2, 3, 4, 5, 6, 9]
 
+10. (функции/строки)
+function addClass(){}
+function removeClass(){}
+function toggleClass(){}
 
+var str = "menu top green";
+
+str = addClass(str, 'new');
+str = addClass(str, 'top');
+str = addClass(str, 'me');
+
+console.log(str); // "menu top green new me"
+
+str = removeClass(str, 'to');
+str = removeClass(str, 'new');
+
+str = toggleClass(str, 'green');
+str = toggleClass(str, 'red');
+
+console.log(str); // "menu top me red"
+
+
+11. (функции/строки)
+function toCamelCase(){}
+
+console.log(toCamelCase("background-color")); // 'backgroundColor';
+console.log(toCamelCase("list-style-image")); // 'listStyleImage';
+console.log(toCamelCase("-webkit-transition")); // 'WebkitTransition';
+
+
+12. (объекты/массивы)
+var names, total, sorted;
+var users = [
+    { name: "Alex", cash: 43 },
+    { name: "John", cash: 274 },
+    { name: "Carl", cash: 82 },
+    { name: "Bill", cash: 14 }
+];
+
+/* some magic */
+
+console.log(names); // ["Alex", "John", "Carl", "Bill"]
+console.log(total); // 413
+console.log(sorted); // [{name:"Bill",cash:14},{name:"Alex",cash:43},{name:"Carl",cash:82},{name:"John",cash:274}]
+console.log(users); // [{name:"Alex",cash:43},{name:"John",cash:274},{name:"Carl",cash:82},{name:"Bill",cash:14}]
+
+13. (Math)
+Напишите функцию getRandom, которая принимает параметры min и max.
+Функция должна возвращать случайное целое число от min до max.
+
+14. (events/scroll)
+Сделать страницу текста, например такую:
+((h2>lorem5)+((p>lorem100)*10)+button>lorem1)*5
+
+Самая нижняя кнопка должна плавно скролить в самый верх страницы.
+Остальные кнопки должны скролить к заголовку, который за кнопкой.
+Для плавного скрола понадобится setInterval.
+Изменить позицию скрола - window.scrollTo(x, y).
+Находить элементы на странице мы научились в уроке.
+Взять позицию элемента относительно страницы можно так:
+el.getBoundingClientRect()

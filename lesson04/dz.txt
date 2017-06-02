@@ -16,6 +16,10 @@ Javascript:
 - JSON
 - массивы
 - Math
+- Date
+- window (open, location, screen, history, navigator)
+- setTimeout, setInterval
+- DOM
 
 
 Домашнее задание:
@@ -125,7 +129,16 @@ console.log(users); // [{name:"Alex",cash:43},{name:"John",cash:274},{name:"Carl
 Напишите функцию getRandom, которая принимает параметры min и max.
 Функция должна возвращать случайное целое число от min до max.
 
-14. (events/scroll)
+14. (events/DOM)
+Сделать кнопку. По клику на эту кнопку менять текст кнопки (btn.innerText) так,
+чтоб на кнопке было написано количество кликов.
+То есть, кнопка будет менять свой текст так:
+Начальный текст: "Кнопка"
+Кликнули один раз: "Кликов: 1"
+Кликнули второй раз: "Кликов: 2"
+И так далее...
+
+15. (events/scroll)
 Сделать страницу текста, например такую:
 ((h2>lorem5)+((p>lorem100)*10)+button>lorem1)*5
 
@@ -133,6 +146,7 @@ console.log(users); // [{name:"Alex",cash:43},{name:"John",cash:274},{name:"Carl
 Остальные кнопки должны скролить к заголовку, который за кнопкой.
 Для плавного скрола понадобится setInterval.
 Изменить позицию скрола - window.scrollTo(x, y).
+window.scrollX и window.scrollY хранят текущую позицию.
 Находить элементы на странице мы научились в уроке.
 Взять позицию элемента относительно страницы можно так:
 el.getBoundingClientRect()

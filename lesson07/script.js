@@ -1,3 +1,19 @@
+/*
+ REST - Representational State Transfer
+ Это архитектура, исходя из которой нужно строить запросы.
+ Запрос выглядит так:
+ GET /users?role=moderator
+ Ответ в виде JSON:
+ [{"id": 14, "phone": "+380671234567"},{"id": 27, "phone": "+380637654321"}]
+
+ SOAP - Simple Object Access Protocol
+ Это протокол доступа к объектам сервера с клиента.
+ Запрос передается через POST в виде xml-структуры.
+ Ответ приходит тоже в виде xml-структуры.
+*/
+
+
+
 // localStorage
 localStorage.setItem('name', 'value');
 localStorage.getItem('name');

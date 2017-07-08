@@ -1,13 +1,13 @@
-Проходили:
-Генераторы
-Коллекции (Set, Map, WeakSet, WeakMap)
-Files
-FileReader
-Тэги audio/video и работа с медиа в JS
-document.styleSheets
+Сегодня изучали:
+- Генераторы
+- Коллекции (Set, Map, WeakSet, WeakMap)
+- Files
+- FileReader
+- Тэги audio/video и работа с медиа в JS
+- document.styleSheets
 
 
-ДЗ:
+Домашнее задание:
 Сделать кнопку в виде плюса, на которую можно нажать и выбрать файл (или несколько).
 
 Под кнопкой должны наполняться два списка:

@@ -19,6 +19,21 @@ JS6(ES2015):
 В каждом примере надо исправить код так, чтоб все тесты прошли (тесты написаны на mocha).
 Мне прислать скриншоты (или вопросы, если что-то не получается).
 
+2.
+Написать функции (желательно как можно короче):
+const getInitials = ...;
+console.log(getInitials({ firstName: "Andy", lastName: "Davidson" })); // A.D.
+console.log(getInitials({ firstName: "Andy" })); // A.
+console.log(getInitials({ lastName: "Davidson" })); // D.
 
+// ---
+const doubleArray = ...;
 
+console.log(doubleArray([1, 2, 3])); // [1, 2, 3, 1, 2, 3]
+console.log(doubleArray([{ one: 1, two: 2 }])); // [{ one: 1, two: 2 }, { one: 1, two: 2 }]
+
+// ---
+const merge = ...
+
+console.log(merge({ one: 1, two: 2 }, { two: 22, three: 3 })); // { one: 1, two: 22, three: 3 }
 

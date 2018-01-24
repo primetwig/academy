@@ -1,0 +1,16 @@
+Сегодня изучали:
+CSS препроцессоры (на примере Stylus)
+
+
+Домашнее задание:
+- сделать спрайт со своими иконками
+- написать стили для этих иконок, чтоб можно было потом только указывать класс
+(пример, <i class="icon icon-circle"></i>)
+- написать css-функцию для подключения шрифта, чтоб можно было не копировать большую страшную конструкцию, а писать так:
+$name = "Proxima Nova"
+$path = "fonts/proxima/"
+font($name, $path, "Proxima")
+font($name, $path, "ProximaBold", "bold")
+font($name, $path, "ProximaBoldItalic", "bold", "italic")
+
+

@@ -128,7 +128,7 @@
 //
 //
 //$('input').css('color');
-//$('input').css(['width', 'height']);
+//$('input').css(['width', 'height']); // { width: "180px", height: "25px" }
 //
 //$('input').css('color', 'red');
 //$('input').css('color', '');

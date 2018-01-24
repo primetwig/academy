@@ -9,5 +9,6 @@ gen
 */web/
 modules/
 *.pdf
+pdfs.zip
 
 

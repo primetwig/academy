@@ -5,7 +5,7 @@ $.fn.serializeObject = function() {
     var array = this.serializeArray();
 
     $.each(array, function() {
-        if (typeof result[this.name] != "undefined") { // already have value with this name
+        if (typeof result[this.name] !== "undefined") { // already have value with this name
 
             if (!result[this.name].push) { // not array yet
                 result[this.name] = [result[this.name]]; // convert value to array

@@ -37,3 +37,7 @@ const merge = ...
 
 console.log(merge({ one: 1, two: 2 }, { two: 22, three: 3 })); // { one: 1, two: 22, three: 3 }
 
+
+
+
+https://codepen.io/anon/pen/YxGjqP?editors=0010

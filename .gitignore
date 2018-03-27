@@ -5,6 +5,7 @@ out
 gen
 
 # user files
+.DS_Store
 **/node_modules/
 */web/
 modules/

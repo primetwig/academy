@@ -1,62 +1,60 @@
-// cache
-var cache = window.applicationCache;
+// cookie
+console.log(document.cookie.split('; '));
 
-window.applicationCache.addEventListener('updateready', function (e) {
+function getCookie(name) {
+    var list = document.cookie.split('; ');
+    var match = list.find(function (item) {
+        var pair = item.split('=');
+        return pair[0] === name;
+    });
+    return match ? decodeURIComponent(match) : void(0);
+}
 
-    //window.location.reload();
+document.cookie = "user=Andy";
 
-    if (cache.status === cache.UPDATEREADY) {
-        confirm("Your page has a new version. Update?") &&
-        window.location.reload();
+var date = new Date(1);
+document.cookie = "name=; path=/; expires=" + date.toUTCString() + "; secure";
+
+
+function setCookie(name, value, options) {
+    options = options || {};
+
+    var expires = options.expires;
+    // as number
+    if (typeof expires == "number" && expires) {
+        var d = new Date();
+        d.setTime(d.getTime() + expires * 1000);
+        expires = options.expires = d;
     }
-});
+    // as Date
+    if (expires && expires.toUTCString) {
+        options.expires = expires.toUTCString();
+    }
+
+    var cookie = name + "=" + encodeURIComponent(value);
+
+    for (var prop in options) {
+        var val = options[prop];
+        cookie += "; " + prop + (val !== true ? '='+val : '');
+    }
+
+    document.cookie = cookie;
+}
 
 
 
-
-//// cookie
-//console.log(document.cookie.split('; '));
+// cache
+//var cache = window.applicationCache;
 //
-//function getCookie(name) {
-//    var list = document.cookie.split('; ');
-//    var match = list.find(function (item) {
-//        var pair = item.split('=');
-//        return pair[0] === name;
-//    });
-//    return match ? decodeURIComponent(match) : void(0);
-//}
+//window.applicationCache.addEventListener('updateready', function (e) {
 //
-//document.cookie = "user=Andy";
+//    //window.location.reload();
 //
-//var date = new Date(1);
-//document.cookie = "name=; path=/; expires=" + date.toUTCString() + "; secure";
-//
-//
-//function setCookie(name, value, options) {
-//    options = options || {};
-//
-//    var expires = options.expires;
-//    // as number
-//    if (typeof expires == "number" && expires) {
-//        var d = new Date();
-//        d.setTime(d.getTime() + expires * 1000);
-//        expires = options.expires = d;
+//    if (cache.status === cache.UPDATEREADY) {
+//        confirm("Your page has a new version. Update?") &&
+//        window.location.reload();
 //    }
-//    // as Date
-//    if (expires && expires.toUTCString) {
-//        options.expires = expires.toUTCString();
-//    }
-//
-//    var cookie = name + "=" + encodeURIComponent(value);
-//
-//    for (var prop in options) {
-//        var val = options[prop];
-//        cookie += "; " + prop + (val !== true ? '='+val : '');
-//    }
-//
-//    document.cookie = cookie;
-//}
-
+//});
 
 
 

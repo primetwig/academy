@@ -9,8 +9,6 @@ JS6(ES2015):
 - функции-стрелки
 - сокращения в объектах
 - классы и наследование
-- генераторы
-- коллекции (Set, Map, WeakSet, WeakMap)
 
 
 Домашнее задание:
@@ -24,7 +22,7 @@ JS6(ES2015):
 const getInitials = ...;
 console.log(getInitials({ firstName: "Andy", lastName: "Davidson" })); // A.D.
 console.log(getInitials({ firstName: "Andy" })); // A.
-console.log(getInitials({ lastName: "Davidson" })); // D.
+console.log(getInitials({ lastName: "Davidson", age: 20 })); // D.
 
 // ---
 const doubleArray = ...;

@@ -1,3 +1,39 @@
+// debounce
+
+function f() {}
+
+var t;
+function scroll() {
+    t && clearTimeout(t);
+    t = setTimeout(f, 500);
+}
+
+window.addEventListener('scroll', scroll);
+
+
+
+// throttle
+
+function f() {}
+
+var t = new Date();
+function scroll() {
+    var c = new Date();
+
+    if (c - t >= 500) {
+        f();
+        t = c;
+    }
+}
+
+window.addEventListener('scroll', scroll);
+
+
+
+
+
+
+
 /*
  REST - Representational State Transfer
  Это архитектура, исходя из которой нужно строить запросы.
